@@ -6,6 +6,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @Controller
 public class HomeController {
 
@@ -14,7 +17,11 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model) {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = new Date();
+
         model.addAttribute("locationStats", this.coronaService.getAllStats());
+        model.addAttribute("date", formatter.format(date));
         return "home";
     }
 }

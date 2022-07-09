@@ -5,6 +5,9 @@ public class LocationStats
     private String state;
     private String country;
     private Integer lastedTotalCases;
+    private Integer previousTotalCases;
+    private Float cr;
+
 
     public String getState() {
         return state;
@@ -30,12 +33,22 @@ public class LocationStats
         this.lastedTotalCases = lastedTotalCases;
     }
 
+    public Integer getPreviousTotalCases() { return previousTotalCases; }
+
+    public void setPreviousTotalCases(Integer previousTotalCases) { this.previousTotalCases = previousTotalCases; }
+
+    public Float getCr() { return cr; }
+
+    public void setCr(Float cr) { this.cr = cr; }
+
     @Override
     public String toString() {
         return "LocationStats{" +
                 "state='" + state + '\'' +
                 ", country='" + country + '\'' +
                 ", lastedTotalCases=" + lastedTotalCases +
+                ", previousTotalCases=" + previousTotalCases +
+                ", cr=" + cr +
                 '}';
     }
 }
