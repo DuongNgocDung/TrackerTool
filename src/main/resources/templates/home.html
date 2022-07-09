@@ -1,0 +1,43 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Ngọc Dung Xinh Đẹp Tuyệt Vời</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<p>Ngọc Dung</p>-->
+<!--<p>Ngọc Dungg</p>-->
+<!--<p>Ngọc Dungggggg</p>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Xin chào Ngọc Dung Xinh Đẹp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<div>
+    <div>Tổng số ca nhiễm COVID hôm nay</div>
+    <div>
+        <table>
+            <tr>
+                <th>Bangn</th>
+                <th>Nước</th>
+                <th>Số liệu thống kê tổng</th>
+            </tr>
+            <tr th:each="item : ${locationStats}">
+                <td th:text="${item.state}"></td>
+                <td th:text="${item.country}"></td>
+                <td th:text="${item.lastedTotalCases}">0</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
