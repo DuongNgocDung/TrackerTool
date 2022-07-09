@@ -1,2 +1,2 @@
 # CovidTrackerTool
- Corona Report daily tool
+ Covid Corona Report daily tool - Learning Project
